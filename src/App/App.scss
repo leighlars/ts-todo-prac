@@ -1,0 +1,8 @@
+@import '../ui/base.scss';
+
+.App {
+  @include columnDisplay;
+  align-items: center;
+  background: $darkBlue;
+  height: 100vh;
+}

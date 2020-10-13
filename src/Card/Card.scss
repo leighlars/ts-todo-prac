@@ -1,0 +1,35 @@
+@import '../ui/base.scss';
+
+.todo-card {
+  @include columnDisplay();
+  justify-content: space-evenly;
+  align-items: center;
+  background: $rosyBrown;
+  border: 1px solid $sand;
+  border-radius: 6px;
+  box-shadow: 1px 1px 3px black;
+  padding: 1%;
+  width: 14em;
+  min-height: 7em;
+  h2 {
+    @include headerFont(1.25em);
+    text-shadow: 1px 1px black;
+  }
+  p {
+    @include textFont(1em);
+  }
+  button {
+    @include textFont(1em);
+    color: $offWhite;
+    background: $darkBlue;
+    border: none;
+    box-shadow: 1px 1px 3px black;
+    padding: 1%;
+    margin: .5em;
+    &:hover {
+      background: $sand;
+      color: $darkBlue;
+    }
+  }
+
+}

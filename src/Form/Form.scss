@@ -1,0 +1,43 @@
+@import '../ui//base.scss';
+
+.add-todo-form {
+  @include columnDisplay();
+  align-items: center;
+  background: $rosyBrown;
+  border-radius: 6px;
+  box-shadow: 1px 1px 3px black;
+  justify-content: space-between;
+  padding: 2%;
+  width: 40em;
+  height: 12em;
+
+  input {
+    @include textFont(1.25em);
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid $sand;
+    color: $offWhite;
+    font-weight: 800;
+    text-shadow: .5px .5px black;
+    width: 90%;
+    input::-webkit-input-placeholder {
+      color: white;
+    }
+  }
+
+  button {
+    @include headerFont(1em);
+    color: $darkBlue;
+    font-weight: 800;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 1px 1px 3px black;
+    padding: .25%;
+    width: 3.25em;
+    margin: 0;
+    &:hover {
+      background: $pewterBlue;
+      color: $offWhite;
+    }
+  }
+}

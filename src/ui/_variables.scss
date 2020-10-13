@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Open+Sans&display=swap');
+
+$badScriptFont: 'Bad Script', cursive;
+$openSansFont: 'Open Sans', display;
+$darkBlue: #28536B;
+$rosyBrown: #C2948A;
+$pewterBlue: #7EA8BE; 
+$offWhite: #F6F0ED;
+$sand: #BBB193;
+
+@mixin columnDisplay() {
+  display: flex;
+  flex-direction: column;
+} 
+
+@mixin rowDisplay() {
+  display: flex;
+}
+
+@mixin headerFont($fontSize) {
+  font-family: $badScriptFont;
+  color: $offWhite;
+  font-size: $fontSize;
+  font-weight: 800;
+  margin: 0;
+} 
+
+@mixin textFont($fontSize) {
+  font-family: $openSansFont;
+  color: $offWhite;
+  font-size: $fontSize;
+  margin: 0;
+}
