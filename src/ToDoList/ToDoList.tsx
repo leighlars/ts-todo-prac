@@ -9,7 +9,6 @@ interface ToDoListProps {
 export const ToDoList: React.FC<ToDoListProps> = props => {
 
   const jsxToDos = () => {
-    props.todoList.shift()
     return props.todoList.map(todo => {
       return <Card name={todo.name} desc={todo.desc} id={todo.id} key={todo.name}/>
     })
@@ -17,8 +16,15 @@ export const ToDoList: React.FC<ToDoListProps> = props => {
   
 
   return(
-    <section className='todo-list'>
-      {jsxToDos()}
+    <section className='todo-section'>
+        <h2>To Do</h2>
+        <div className='todos'>
+          {jsxToDos()}
+        </div>
+      {/* <div className='completed'>
+        <h2>Done!</h2>
+      </div> */}
+
     </section>
   )
 

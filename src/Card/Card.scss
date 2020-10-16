@@ -8,6 +8,7 @@
   border: 1px solid $sand;
   border-radius: 6px;
   box-shadow: 1px 1px 3px black;
+  margin: 10px;
   padding: 1%;
   width: 14em;
   min-height: 7em;
@@ -15,20 +16,28 @@
     @include headerFont(1.25em);
     text-shadow: 1px 1px black;
   }
-  p {
-    @include textFont(1em);
+  .incomplete-text, .complete-text {
+    @include textFont(.95em);
   }
-  button {
+  .complete-text {
+    text-decoration: line-through;
+    text-decoration-color: black;
+  }
+  .incomplete-btn, .complete-btn {
     @include textFont(1em);
     color: $offWhite;
     background: $darkBlue;
     border: none;
+    border-radius: 6px;
     box-shadow: 1px 1px 3px black;
-    padding: 1%;
     margin: .5em;
     &:hover {
       background: $sand;
       color: $darkBlue;
+    }
+    .complete-btn {
+      color: $darkBlue;
+      background: $offWhite;
     }
   }
 

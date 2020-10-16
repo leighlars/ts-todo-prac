@@ -5,14 +5,14 @@ import {Form} from '../Form/Form'
 import {ToDoList} from '../ToDoList/ToDoList'
 
 const App: React.FC = () => {
-  const [todoList, setToDoList] = useState([{name: '', desc: '', id: 1}])
+  const [todoList, setToDoList] = useState<Array<{name: string, desc: string, id: number}>>([])
 
   useEffect(() => {}, [todoList])
 
   // const [completedList, setCompletedList] = useState<Array<object>>([{}])
 
   const addToDo = (todo: {name: string, desc: string, id: number}) => {
-    const listCopy = todoList
+    const listCopy = [...todoList]
     listCopy.push(todo)
     setToDoList(listCopy)
   }

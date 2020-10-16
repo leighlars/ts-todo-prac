@@ -1,8 +1,16 @@
 @import '../ui/base.scss';
 
-.todo-list {
+.todo-section {
   display: flex;
-  width: 60%;
+  flex-direction: column;
+  width: 80%;
   margin-top: 2em;
-  flex-wrap: wrap;
+  h2 {
+    @include headerFont(2em);
+  }
+  .todos {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
 }
