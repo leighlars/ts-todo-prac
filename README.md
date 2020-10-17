@@ -8,7 +8,6 @@
 - VSCode
 - Typescript
 - React Hooks
--
 
 ##### Set-up 
 - `Clone` this repository and run `npm i`
